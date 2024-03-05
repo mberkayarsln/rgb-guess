@@ -79,7 +79,7 @@ $(document).ready(function () {
     }
     $("#refresh").click();
     clicks++;
-    $("#clickCount").text(`Click : ${clicks}`);
+    $("#clickCount").text(`Count : ${clicks}`);
     if (clicks === 10) {
       $("#content").html(`
       <div class="container-sm bg-secondary rounded position-absolute top-50 start-50 translate-middle h-100 py-3 d-flex flex-column justify-content-around align-items-center" id="content">
@@ -94,7 +94,7 @@ $(document).ready(function () {
         startGame();
         $("#correctCount").text(`True : 0`);
         $("#falseCount").text(`False : 0`);
-        $("#clickCount").text(`Click : 0`);
+        $("#clickCount").text(`Count : 0`);
       });
     }
   });
