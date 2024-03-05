@@ -10,9 +10,52 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <style>
+      .box {
+        width: 35%;
+        cursor: pointer;
+      }
+      #refresh,#restart {
+        height: 45px;
+        width: 150px;
+      }
+      #start {
+        width: 30%;
+      }
+      @media (max-width: 576px) {
+        .box {
+          width: 40%;
+        }
+        #start {
+          width: 50%;
+        }
+      }
+    </style>
     <title>RGB Guess</title>
   </head>
   <body>
+    <div class="container-fluid bg-info position-relative vh-100" id="wrapper">
+      <div
+        class="container-sm bg-secondary rounded position-absolute top-50 start-50 translate-middle h-75 py-3 d-flex justify-content-center align-items-center"
+        id="content"
+      >
+        <button
+          type="button"
+          class="btn btn-info btn-lg text-light h-25"
+          id="start"
+        >
+          Click to start!
+        </button>
+      </div>
+      <div
+        class="container-sm d-flex d-flex justify-content-between align-items-center"
+      >
+        <p class="h4 mt-4 text-success" id="correctCount">True : 0</p>
+        <p class="h4 mt-4 text-white " id="clickCount">Click : 0</p>
+        <p class="h4 mt-4 text-danger" id="falseCount">False : 0</p>
+      </div>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
